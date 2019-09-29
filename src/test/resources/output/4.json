@@ -1,0 +1,6 @@
+[
+  { "op": "remove", "path": "/b/c" },
+  { "op": "replace", "path": "/a", "value": { "name" : "a" }  },
+  { "op": "remove", "path": "/d" },
+  { "op": "remove", "path": "/1" }
+]

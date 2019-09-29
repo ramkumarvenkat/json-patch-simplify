@@ -1,0 +1,15 @@
+[
+  { "op": "replace", "path": "/b/c", "value": "bc" },
+  { "op": "replace", "path": "/a", "value": "a" },
+  { "op": "replace", "path": "/b/c/d", "value": "DEF" },
+  { "op": "replace", "path": "/d", "value": "D" },
+  { "op": "replace", "path": "/2", "value": "2" },
+  { "op": "add", "path": "/2", "value": "NEW" },
+  { "op": "add", "path": "/2", "value": [1,2,3] },
+  { "op": "replace", "path": "/2/3", "value": {} },
+  { "op": "add", "path": "/2/3", "value": ["test"] },
+  { "op": "add", "path": "/3/4/5/6", "value": {} },
+  { "op": "add", "path": "/3/4/5/6", "value": ["test"] },
+  { "op": "replace", "path": "/3/4", "value": [] },
+  { "op": "add", "path": "/2/3", "value": {} }
+]

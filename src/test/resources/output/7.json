@@ -1,0 +1,14 @@
+[
+  { "op": "add", "path": "/a", "value": "a" },
+  { "op": "copy", "from": "/a", "path": "/b" },
+  { "op": "replace", "path": "/c", "value": "c" },
+  { "op": "move", "from": "/c", "path": "/d" },
+  { "op": "add", "path": "/1/2", "value": "12" },
+  { "op": "move", "from": "/1", "path": "/3" },
+  { "op": "add", "path": "/4/5", "value": "45" },
+  { "op": "copy", "from": "/4", "path": "/6" },
+  { "op": "replace", "path": "/7/8/9", "value": "789" },
+  { "op": "move", "from": "/7", "path": "/10" },
+  { "op": "add", "path": "/11/12/13/14", "value": "11121314" },
+  { "op": "copy", "from": "/11/12", "path": "/15/16" }
+]

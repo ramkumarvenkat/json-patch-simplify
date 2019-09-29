@@ -1,0 +1,11 @@
+[
+  { "op": "remove", "path": "/a"},
+  { "op": "add", "path": "/b/c/d", "value": "bcd" },
+  { "op": "remove", "path": "/b/c" },
+  { "op": "add", "path": "/a", "value": { "name" : "a" } },
+  { "op": "add", "path": "/d/e/f", "value": "def" },
+  { "op": "remove", "path": "/d" },
+  { "op": "add", "path": "/x/y/z", "value": "xyz" },
+  { "op": "remove", "path": "/x/y/z" },
+  { "op": "remove", "path": "/1" }
+]

@@ -1,2 +1,18 @@
 *.class
 *.log
+logs/
+
+# SBT
+dist
+project/target/
+project/project/target/
+test/target/
+target/
+.target
+
+# Idea
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings

@@ -1,0 +1,11 @@
+[
+  { "op": "add", "path": "/a", "value": "a" },
+  { "op": "test", "path": "/a", "value": "a" },
+  { "op": "remove", "path": "/a" },
+  { "op": "remove", "path": "/b" },
+  { "op": "test", "path": "/b", "value": "" },
+  { "op": "add", "path": "/c", "value": "c" },
+  { "op": "replace", "path": "/c", "value": "C" },
+  { "op": "test", "path": "/c", "value": "C" },
+  { "op": "remove", "path": "/c" }
+]

@@ -1,0 +1,5 @@
+[
+  { "op": "add", "path": "/bar", "value": "baz" },
+  { "op": "add", "path": "/a", "value": "a" },
+  { "op": "add", "path": "/b", "value": "b" }
+]
