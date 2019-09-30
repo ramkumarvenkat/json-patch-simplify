@@ -10,7 +10,7 @@ class Simplifier {
     def shouldRemovePreviousOperation(previousOpt: Option[Operation]) = {
       previousOpt.exists { previous =>
         op match {
-          case "add" => previous.op.equals("remove")
+          case "add" => previous.op.equals("remove") // Because we will transform add to replace
           case "remove" => previous.op.equals("add") || previous.op.equals("remove") || previous.op.equals("replace")
           case "replace" => previous.op.equals("add") || previous.op.equals("remove") || previous.op.equals("replace")
           case _ => false
@@ -22,7 +22,7 @@ class Simplifier {
       previousOpt.map { previous =>
         op match {
           case "add" if previous.op.equals("remove") => Some(this.copy(op = "replace"))
-          case "remove" if previous.op.equals("add") | previous.op.equals("replace") => None
+          case "remove" if previous.op.equals("add") | previous.op.equals("replace") => None //Previous operation will also be removed along with the current
           case _ => Some(this)
         }
       }.getOrElse(Some(this))
