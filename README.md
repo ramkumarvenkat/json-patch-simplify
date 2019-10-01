@@ -5,10 +5,10 @@ This is a small project that demonstrates how to remove redundant operations in 
 The project takes in a json patch and tries to simplify the patch by removing redundant operations. It also transforms an operation based on the previous operation and deletes appropriate children if a parent path is deleted.
 
 * `Remove` + `Add` can be combined into `Replace`
-* `Add` or `Replace` can be removed if followed by a `Remove` (along with the `Remove` itself)
+* `Add` can be removed if followed by a `Remove` (along with the `Remove` itself, since there is no point in removing a path that was added in a patch)
 * `Add` or `Remove` can be removed if followed by a `Replace`
 * `Replace` and `Remove` operations can be deduplicated
-* If a `Remove` is done at a parent path, then all children without a `test`, `copy` or `move` can be removed
+* If a `Remove` is done at a parent path, then all children without a `test`, `copy` or `move` (as the last operation) can be removed
 
 ## Algorithm
 There are 2 data-structures:
