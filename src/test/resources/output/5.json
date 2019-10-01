@@ -3,6 +3,7 @@
   { "op": "replace", "path": "/a", "value": "a" },
   { "op": "replace", "path": "/b/c/d", "value": "DEF" },
   { "op": "replace", "path": "/d", "value": "D" },
+  { "op": "remove", "path": "/1" },
   { "op": "replace", "path": "/2", "value": "2" },
   { "op": "add", "path": "/2", "value": "NEW" },
   { "op": "add", "path": "/2", "value": [1,2,3] },

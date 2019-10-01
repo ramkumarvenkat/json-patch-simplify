@@ -22,7 +22,7 @@ class Simplifier {
       previousOpt.map { previous =>
         op match {
           case "add" if previous.op.equals("remove") => Some(this.copy(op = "replace"))
-          case "remove" if previous.op.equals("add") | previous.op.equals("replace") => None //Previous operation will also be removed along with the current
+          case "remove" if previous.op.equals("add") => None //Previous operation will also be removed along with the current
           case _ => Some(this)
         }
       }.getOrElse(Some(this))
