@@ -17,7 +17,6 @@ There are 2 data-structures:
 * Result set: Contains the simplified operations. As each new operation is processed, the result set is updated to delete the previous operation as per the rules above (we actually do a soft delete and clean up the result set later)
 
 ## Code
-
 [Simplifier.scala](https://github.com/ramkumarvenkat/json-patch-simplify/blob/master/src/main/scala/com/jsonpatch/simplify/Simplifier.scala) contains the complete code. Tests are [here](https://github.com/ramkumarvenkat/json-patch-simplify/tree/master/src/test/resources). The `input` and `output` folders contains the input patch and the simplified patch respectively.
 
 * `1.json` tests `add`+`remove`
@@ -28,3 +27,9 @@ There are 2 data-structures:
 * `6.json` has `test` and ensure none of the above rules can be applied, say if a `test` lies in between `remove` and `add`
 * `7.json` tests `copy` and `move`
 * `8.json` tests `copy`, `move`, `test`, `add` and `remove`
+
+## TODO
+* Merge Json values on `Replace` or `Add` followed by another `Add`
+* Merge children values to the parent and create a single JSON (if the child operations are not `Test`, `Copy` or `Move`)
+* Make the functions more functional, remove mutability
+* Better and clear code - maybe use state machines?
